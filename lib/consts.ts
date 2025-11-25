@@ -1,4 +1,4 @@
-import { HeroButton, ParallaxImage } from "./types";
+import { HeroButton, ParallaxImage, TeamMember } from "./types";
 
 export const parallaxImages: ParallaxImage[] = [
     {
@@ -58,5 +58,17 @@ export const parallaxImages: ParallaxImage[] = [
       text: 'Get in touch',
       href: '/contact',
       variant: 'secondary',
+    },
+  ];
+
+  export const teamMembers: TeamMember[] = [
+    {
+      id: 'Dr-Joshua',
+      name: 'Dr Joshua Olorunkiya (PhD.)',
+      role: 'CEO',
+      image: '/assets/teams/DrJoshua.jpeg',
+      bio: 'Expert in sustainable development with 10+ years of experience in green energy solutions.',
+      email: 'jenny.wilson@esthoj.com',
+      linkedin: 'https://linkedin.com/in/jennywilson',
     },
   ];
