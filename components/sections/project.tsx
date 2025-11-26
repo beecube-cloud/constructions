@@ -3,10 +3,12 @@ import React, { useEffect, useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
-interface Project {
+export interface Project {
   title: string;
   date: string;
-  image: string;
+  images: string[];
+  slug: string;
+  description: string;
 }
 
 interface ProjectsSectionProps {
@@ -33,30 +35,9 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({
   const [isMobile, setIsMobile] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
-  const defaultProjects: Project[] = [
-    {
-      title: "Park Villas Development, Maitama, Abuja",
-      date: "13th April, 2025",
-      image: "/images/project-1.png?w=600&h=400&fit=crop",
-    },
-    {
-      title: "Upcoming Project at Central Business District, Abuja",
-      date: "13th April, 2025",
-      image: "/images/project-2.png?w=600&h=400&fit=crop",
-    },
-    {
-      title: "Aust Estate Galadimawa, Abuja",
-      date: "13th April, 2025",
-      image: "/images/project-3.png?w=600&h=400&fit=crop",
-    },
-    {
-      title: "Private Mansion, Anambra State",
-      date: "13th April, 2025",
-      image: "/images/project-4.png?w=600&h=400&fit=crop",
-    },
-  ];
 
-  const displayProjects = projects || defaultProjects;
+
+  const displayProjects = projects || [];
   const finalProjects = maxItems
     ? displayProjects.slice(0, maxItems)
     : displayProjects;
@@ -138,43 +119,46 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({
               </Link>
             </div>
           )}
-        </div>
+        </div>  
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
-          {finalProjects.map((project, index) => {
-            const isItemVisible = visibleItems.includes(index);
+        {finalProjects.map((project, index) => {
+  const isItemVisible = visibleItems.includes(index);
 
-            return (
-              <div
-                key={index}
-                className={`group cursor-pointer transition-all duration-700 hover:-translate-y-1 sm:hover:-translate-y-2 ${
-                  isItemVisible
-                    ? "opacity-100 transform translate-y-0"
-                    : "opacity-0 transform translate-y-8"
-                }`}
-                style={{
-                  transitionDelay: `${index * (isMobile ? 100 : 150)}ms`,
-                }}
-              >
-                <div className="rounded-2xl sm:rounded-3xl overflow-hidden mb-3 sm:mb-4 aspect-4/3 shadow-lg group-hover:shadow-xl transition-all duration-500">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 sm:gap-4">
-                  <h3 className="text-lg sm:text-xl font-semibold text-primary-900 leading-tight group-hover:text-red-600 transition-colors duration-300 flex-1">
-                    {project.title}
-                  </h3>
-                  <span className="text-xs sm:text-sm text-gray-500 whitespace-nowrap order-first sm:order-last">
-                    {project.date}
-                  </span>
-                </div>
-              </div>
-            );
-          })}
+  return (
+    <Link
+      href={`/projects/${project.slug}`}
+      key={project.slug}
+      className={`group block transition-all duration-700 hover:-translate-y-1 sm:hover:-translate-y-2 ${
+        isItemVisible
+          ? "opacity-100 transform translate-y-0"
+          : "opacity-0 transform translate-y-8"
+      }`}
+      style={{
+        transitionDelay: `${index * (isMobile ? 100 : 150)}ms`,
+      }}
+    >
+      <div className="rounded-2xl sm:rounded-3xl overflow-hidden mb-3 sm:mb-4 aspect-4/3 shadow-lg group-hover:shadow-xl transition-all duration-500">
+        <img
+          src={project.images?.[0]}
+          alt={project.title}
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          loading="lazy"
+        />
+      </div>
+
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 sm:gap-4">
+        <h3 className="text-lg sm:text-xl font-semibold text-primary-900 leading-tight group-hover:text-red-600 transition-colors duration-300 flex-1">
+          {project.title}
+        </h3>
+        <span className="text-xs sm:text-sm text-gray-500 whitespace-nowrap order-first sm:order-last">
+          {project.date}
+        </span>
+      </div>
+    </Link>
+  );
+})}
+
         </div>
       </div>
     </div>
@@ -182,4 +166,3 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({
 };
 
 export default ProjectsSection;
-export type { Project, ProjectsSectionProps };

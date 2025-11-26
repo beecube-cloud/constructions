@@ -1,7 +1,12 @@
 "use client"
 import React, { useEffect, useRef, useState } from "react";
 
-const AboutSection = () => {
+const AboutSection = ({
+  textheading="text-primary",
+  textcontent="text-gray-600",
+  backgroundColor="bg-white",
+
+}) => {
   const [isVisible, setIsVisible] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -65,10 +70,10 @@ const AboutSection = () => {
   const duplicatedImages = [...images, ...images];
 
   return (
-    <div ref={sectionRef} className="w-full min-h-screen bg-white px-8 py-24 overflow-hidden">
+    <div ref={sectionRef} className={`w-full min-h-screen px-8 py-24 overflow-hidden ${backgroundColor}`}>
       <div className="max-w-7xl mx-auto">
         <div className="mb-16">
-          <h2 className={`text-5xl text-primary mb-12 transition-all duration-1000 ${
+          <h2 className={`text-5xl ${textheading} mb-12 transition-all duration-1000 ${
             isVisible 
               ? 'opacity-100 transform translate-y-0' 
               : 'opacity-0 transform translate-y-8'
@@ -82,7 +87,7 @@ const AboutSection = () => {
                 ? 'opacity-100 transform translate-x-0' 
                 : 'opacity-0 transform -translate-x-8'
             }`}>
-              <p className="text-gray-600 leading-relaxed">
+              <p className={`${textcontent} leading-relaxed`}>
                 Esthoj Engineering Construction & Facility Management Limited
                 launched in 2018 as part of Esthoj Multi-Disciplinary Group.
                 With over a decade of consulting and international experience,
@@ -97,20 +102,20 @@ const AboutSection = () => {
                 : 'opacity-0 transform translate-x-8'
             }`}>
               <div className="group hover:transform hover:scale-105 transition-all duration-300">
-                <h3 className="text-sm font-semibold text-primary uppercase tracking-wider mb-3 group-hover:text-red-600 transition-colors duration-300">
+                <h3 className={`text-sm font-semibold ${textheading} uppercase tracking-wider mb-3 group-hover:text-red-600 transition-colors duration-300`}>
                   OUR MISSION
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className={`${textcontent} leading-relaxed`}>
                   To develop, build and service Nigeria's physical
                   infrastructure for living, working and traveling.
                 </p>
               </div>
 
               <div className="group hover:transform hover:scale-105 transition-all duration-300">
-                <h3 className="text-sm font-semibold text-primary uppercase tracking-wider mb-3 group-hover:text-red-600 transition-colors duration-300">
+                <h3 className={`text-sm font-semibold ${textheading} uppercase tracking-wider mb-3 group-hover:text-red-600 transition-colors duration-300`}>
                   VISION
                 </h3>
-                <p className="text-gray-600 leading-relaxed group-hover:text-gray-800 transition-colors duration-300">
+                <p className={`${textcontent} leading-relaxed group-hover:text-gray-800 transition-colors duration-300`}>
                   To be the leading provider of construction services in
                   Nigeria.
                 </p>
@@ -118,6 +123,7 @@ const AboutSection = () => {
             </div>
           </div>
         </div>
+      </div>
 
         {/* Scrolling Images Section */}
         <div className={`transition-all duration-1000 delay-700 ${
@@ -152,7 +158,6 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 
