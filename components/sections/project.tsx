@@ -35,7 +35,6 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({
   const [isMobile, setIsMobile] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
-  console.log({projects})
 
 
   const displayProjects = projects || [];
