@@ -1,10 +1,20 @@
-import React, { RefObject, useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Image from "next/image";
 
-export default function sectionWithLineDecorator({children, backgroundColor, sectionRef}: {children: React.ReactNode, backgroundColor: string, sectionRef:  RefObject<HTMLDivElement | null>}) {
+export default function sectionWithLineDecorator(
+    {
+        children,
+        sectionRef,
+        backgroundColor = "bg-white",
+      }: {
+        children: React.ReactNode;
+        sectionRef?: React.RefObject<HTMLDivElement | null>;
+        backgroundColor?: string;
+      }
+) {
 
   return (
-    <div ref={sectionRef} className={`w-full min-h-screen ${backgroundColor} via-blue-50   relative overflow-hidden`}>
+    <div ref={sectionRef} className={`w-full min-h-screen ${backgroundColor} via-blue-50  py-24 relative overflow-hidden`}>
       {/* Left decorative line SVG */}
       <div className="absolute left-0 top-0 h-full opacity-15">
         <Image

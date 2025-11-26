@@ -72,3 +72,86 @@ export const parallaxImages: ParallaxImage[] = [
       linkedin: 'https://linkedin.com/in/jennywilson',
     },
   ];
+
+  export const projectsList = [
+    {
+      slug: "ethanol-factory-ologbo",
+      title: "Ethanol Factory Ologbo, Edo State",
+      date: "13th April, 2025",
+      description: 'A multi-level industrial processing plant featuring heavy-duty structural steel, integrated piping systems, and engineered platforms designed for safe and efficient industrial operations.',
+      images: [
+         "/assets/projects/ethanolFactory/image1.webp",
+         "/assets/projects/ethanolFactory/image2.webp",
+         "/assets/projects/ethanolFactory/image3.webp",
+         "/assets/projects/ethanolFactory/image4.webp",
+         "/assets/projects/ethanolFactory/image5.webp",
+         "/assets/projects/ethanolFactory/image6.webp",
+         "/assets/projects/ethanolFactory/image7.webp",
+        ]
+    },
+    {
+      slug: 'ph-mansion',
+      title: "Port Harcourt Mansion",
+      date: "13th April, 2025",
+      description: 'A grand luxury residence featuring neoclassical architectural design, highlighted by tall Corinthian columns, a marble-finished fountain court, and refined exterior detailing that reflects elegance and craftsmanship.',
+      images: [
+        "/assets/projects/phMansion/image1.webp",
+        "/assets/projects/phMansion/image2.webp",
+        "/assets/projects/phMansion/image3.webp",
+        "/assets/projects/phMansion/image4.webp",
+        "/assets/projects/phMansion/image5.webp",
+        "/assets/projects/phMansion/image6.webp",
+      ],
+    },
+    {
+      slug: 'renewed-hope-projects',
+      title: "Renewed Hope Project Abuja",
+      date: "13th April, 2025",
+      description: 'A residential estate featuring a mix of 2-bedroom and 3-bedroom units, designed to provide comfortable and functional living spaces for families and individuals.',
+      images: [
+        "/assets/projects/renewedHope/image1.webp",
+        "/assets/projects/renewedHope/image2.webp",
+        "/assets/projects/renewedHope/image3.webp",
+      ],
+    },
+    {
+      slug: 'hotr',
+      title: "HOTR",
+      date: "13th April, 2025",
+      description: '',
+      images: [
+        "/assets/projects/hotr/image1.webp",
+        "/assets/projects/hotr/image2.webp",
+        "/assets/projects/hotr/image3.webp",
+        "/assets/projects/hotr/image4.webp",
+      ],
+    },
+    // Add more projects for the full projects page
+    {
+      slug: 'enclave-estate-asokoro',
+      title: "Enclave Estate Asokoro, Abuja",
+      date: "10th March, 2025",
+      description: 'A residential estate featuring a mix of 2-bedroom and 3-bedroom units, designed to provide comfortable and functional living spaces for families and individuals.',
+      images: [
+        "/assets/projects/enclave/image1.webp",
+        "/assets/projects/enclave/image2.webp",
+        "/assets/projects/enclave/image3.webp",
+        "/assets/projects/enclave/image4.webp",
+        "/assets/projects/enclave/image5.webp",
+        "/assets/projects/enclave/image6.webp",
+        "/assets/projects/enclave/image7.webp",
+      ],
+    },
+    {
+      slug: 'bua',
+      title: "BUA Project",
+      date: "25th February, 2025",
+      description: 'A residential estate featuring a mix of 2-bedroom and 3-bedroom units, designed to provide comfortable and functional living spaces for families and individuals.',
+      images: [
+        "/assets/projects/bua/image1.webp",
+        "/assets/projects/bua/image2.webp",
+        "/assets/projects/bua/image3.webp",
+        "/assets/projects/bua/image4.webp",
+      ],
+    },
+  ];

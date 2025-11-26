@@ -1,5 +1,6 @@
 "use client"
 import AboutSection from "@/components/sections/about-us";
+import SectionHeader from "@/components/sections/headerSection";
 import MessageFromCEO from "@/components/sections/MessageFromCEO";
 import { TeamSectionAnimated } from "@/components/sections/teamMembers";
 import { teamMembers } from "@/lib/consts";

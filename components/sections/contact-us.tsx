@@ -4,7 +4,15 @@ import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
 import Image from "next/image";
 import SectionWithLineDecorator from "@/sections/sectionWithLineDecorator";
 
-const ContactSection = () => {
+const ContactSection = ({
+  textheading = "text-primary",
+  textcontent = "text-gray-600",
+  backgroundColor = "bg-white"
+}: {
+  textheading?: string,
+  textcontent?: string,
+  backgroundColor?: string
+}) => {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -16,7 +24,9 @@ const ContactSection = () => {
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
   const [focusedField, setFocusedField] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const sectionRef = useRef<HTMLDivElement>(null);
+
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -56,26 +66,43 @@ const ContactSection = () => {
     setFocusedField(null);
   };
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubmitting(false);
-    
-    // Reset form with animation
-    setFormData({
-      fullName: "",
-      email: "",
-      phone: "",
-      message: "",
-    });
+    setSubmitStatus('idle');
+  
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      const result = await response.json();
+  
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to send message');
+      }
+  
+      setSubmitStatus('success');
+      setFormData({
+        fullName: '',
+        email: '',
+        phone: '',
+        message: '',
+      });
+    } catch (error) {
+      console.error('Submit error:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
-    <SectionWithLineDecorator sectionRef={sectionRef} backgroundColor="bg-primary-50">
+    <SectionWithLineDecorator sectionRef={sectionRef} backgroundColor={backgroundColor}>
 
       <div className="max-w-7xl mx-auto relative z-10">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
@@ -85,15 +112,15 @@ const ContactSection = () => {
                       ? 'opacity-100 transform translate-y-0' 
                       : 'opacity-0 transform translate-y-8'
                   }`}>
-                    <h2 className="text-5xl text-primary mb-4">
+                    <h2 className={`text-5xl ${textheading} mb-4`}>
                       Contact us
                     </h2>
-                    <p className="text-gray-600 text-lg">
+                    <p className={`${textcontent} text-lg`}>
                       We are here to help you make a first move to greener choice.
                     </p>
                   </div>
 
-                  <div className="space-y-6">
+                  <div className={`space-y-6 ${textcontent}`}>
                     {[
                       {
                         icon: Mail,
@@ -101,9 +128,8 @@ const ContactSection = () => {
                         content: (
                           <a
                             href="mailto:info@esthoj.com"
-                            className="text-secondary-gray font-medium hover:underline hover:text-primary transition-colors duration-300"
-                          >
-                            info@esthoj.com
+                            className={`${textcontent} font-medium hover:underline hover:text-primary transition-colors duration-300`}>
+                            info@esthoj.com`
                           </a>
                         )
                       },
@@ -111,7 +137,7 @@ const ContactSection = () => {
                         icon: Phone,
                         label: "Phone",
                         content: (
-                          <p className="text-secondary-gray font-medium">
+                          <p className={`${textcontent} font-medium`}>
                             0814 098 9555 | 0905 160 2999 |<br />
                             0908 398 6435
                           </p>
@@ -121,7 +147,7 @@ const ContactSection = () => {
                         icon: MapPin,
                         label: "Address",
                         content: (
-                          <p className="text-secondary-gray font-medium">
+                          <p className={`${textcontent} font-medium`}>
                             10, Lennar Hillside Estate, Kubwa, Abuja.
                           </p>
                         )
@@ -138,9 +164,7 @@ const ContactSection = () => {
                               ? 'opacity-100 transform translate-x-0'
                               : 'opacity-0 transform -translate-x-8'
                           }`}
-                          style={{
-                            transitionDelay: `${300 + index * 200}ms`
-                          }}
+                          style={{ transitionDuration: '1000ms', transitionDelay: `${300 + index * 200}ms` }}
                         >
                           <div className="bg-primary p-3 rounded-xl group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 group-hover:shadow-lg">
                             <Icon className="w-6 h-6 text-white" />
