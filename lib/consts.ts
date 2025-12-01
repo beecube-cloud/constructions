@@ -1,4 +1,4 @@
-import { HeroButton, ParallaxImage, TeamMember } from "./types";
+import { FAQItem, HeroButton, ParallaxImage, TeamMember } from "./types";
 
 export const parallaxImages: ParallaxImage[] = [
     {
@@ -66,7 +66,7 @@ export const parallaxImages: ParallaxImage[] = [
       id: 'Dr-Joshua',
       name: 'Dr Joshua Olorunkiya (PhD.)',
       role: 'CEO',
-      image: '/assets/teams/DrJoshua.jpeg',
+      image: '/assets/teams/drjoshua.webp',
       bio: 'Expert in sustainable development with 10+ years of experience in green energy solutions.',
       email: 'jenny.wilson@esthoj.com',
       linkedin: 'https://linkedin.com/in/jennywilson',
@@ -116,7 +116,7 @@ export const parallaxImages: ParallaxImage[] = [
     },
     {
       slug: 'hotr',
-      title: "HOTR",
+      title: "House on the Rock",
       date: "13th April, 2025",
       description: '',
       images: [
@@ -140,6 +140,14 @@ export const parallaxImages: ParallaxImage[] = [
         "/assets/projects/enclave/image5.webp",
         "/assets/projects/enclave/image6.webp",
         "/assets/projects/enclave/image7.webp",
+        "/assets/projects/enclave/image8.webp",
+        "/assets/projects/enclave/image9.webp",
+        "/assets/projects/enclave/image10.webp",
+        "/assets/projects/enclave/image11.webp",
+        "/assets/projects/enclave/image12.webp",
+        "/assets/projects/enclave/image13.webp",
+        "/assets/projects/enclave/image14.webp",
+        "/assets/projects/enclave/image15.webp",
       ],
     },
     {
@@ -154,4 +162,78 @@ export const parallaxImages: ParallaxImage[] = [
         "/assets/projects/bua/image4.webp",
       ],
     },
+    {
+      slug: 'abia',
+      title: "Abia Project",
+      date: "25th February, 2025",
+      description: 'A residential estate featuring a mix of 2-bedroom and 3-bedroom units, designed to provide comfortable and functional living spaces for families and individuals.',
+      images: [
+        "/assets/projects/abia1/image1.webp",
+        "/assets/projects/abia1/image2.webp",
+        "/assets/projects/abia1/image3.webp",
+        "/assets/projects/abia1/image4.webp",
+        "/assets/projects/abia1/image5.webp",
+        "/assets/projects/abia1/image6.webp",
+        "/assets/projects/abia1/image7.webp",
+        "/assets/projects/abia1/image8.webp",
+      ],
+    },
+    {
+      slug: 'bima',
+      title: "Bima Project",
+      date: "25th February, 2025",
+      description: 'A residential estate featuring a mix of 2-bedroom and 3-bedroom units, designed to provide comfortable and functional living spaces for families and individuals.',
+      images: [
+        "/assets/projects/bima/image1.webp",
+        "/assets/projects/bima/image2.webp",
+        "/assets/projects/bima/image3.webp",
+        "/assets/projects/bima/image4.webp",
+        "/assets/projects/bima/image5.webp",
+        "/assets/projects/bima/image6.webp",
+        "/assets/projects/bima/image7.webp",
+        "/assets/projects/bima/image8.webp",
+        "/assets/projects/bima/image9.webp",
+        "/assets/projects/bima/image10.webp",
+        "/assets/projects/bima/image11.webp",
+        "/assets/projects/bima/image12.webp",
+      ],
+
+    },
   ];
+
+
+
+  export const faqsList: FAQItem[] = [
+    {
+      id: 'bills-of-quantities',
+      question: 'What is a Bill of Quantities (BOQ)?',
+      answer:
+        'A Bill of Quantities is a structured document that itemizes materials, labor, and work sections required for a construction project. It enables accurate pricing by contractors and helps in tender evaluation and cost control.',
+    },
+    {
+      id: 'contract-types',
+      question: 'What types of construction contracts do you work with?',
+      answer:
+        'We work with various contract forms including Lump Sum, Measure & Pay, Design and Build, EPC, and FIDIC-based contracts. The appropriate contract type is selected based on project scope, client objectives, and risk allocation.',
+    },
+    {
+      id: 'consulting-services',
+      question: 'What consulting services do you provide in the construction industry?',
+      answer:
+        'We offer consulting services such as feasibility studies, cost planning, value engineering, contract advisory, claims & dispute resolution, procurement planning, and financial reporting for construction projects.',
+    },
+    {
+      id: 'tendering-support',
+      question: 'Do you assist companies with tendering and bid preparation?',
+      answer:
+        'Yes. We support clients in preparing competitive bids, developing BOQs, conducting rate analysis, reviewing tender documents, and ensuring compliance with client specifications.',
+    },
+    {
+      id: 'site-visits',
+      question: 'Do you conduct site inspections and progress valuations?',
+      answer:
+        'Yes. We perform routine site visits to assess work progress, verify completed activities, prepare interim valuations, and ensure quality and contract compliance.',
+    },
+  ];
+  
+  

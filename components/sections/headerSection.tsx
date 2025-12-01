@@ -1,3 +1,4 @@
+'use client'
 import { motion } from "framer-motion";
 
 export default function SectionHeader({ title, description, bgColor= 'bg-[#0A1236]/95' }: { title: string, description: string, bgColor?: string }) {

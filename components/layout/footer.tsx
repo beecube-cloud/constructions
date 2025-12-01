@@ -35,7 +35,7 @@ export default function CustomizableFooter({
       links: [
         { name: 'Solutions', href: '/solutions' },
         { name: 'How it works', href: '/how-it-works' },
-        { name: 'Pricing', href: '/pricing' },
+        { name: 'Pricing', href: 'https://wa.me/2347033538311' },
       ],
     },
     {
