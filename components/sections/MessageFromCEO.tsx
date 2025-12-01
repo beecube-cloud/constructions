@@ -40,7 +40,7 @@ export default function FounderMessage() {
         >
           <div className="rounded-2xl overflow-hidden shadow-lg w-[320px] h-[420px] relative">
             <Image
-              src="/assets/teams/DrJoshua.jpeg"
+              src="/assets/teams/drjoshua.webp"
               alt="Founder"
               fill
               className="object-cover"

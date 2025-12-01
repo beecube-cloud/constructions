@@ -148,7 +148,7 @@ const ContactSection = ({
                         label: "Address",
                         content: (
                           <p className={`${textcontent} font-medium`}>
-                            10, Lennar Hillside Estate, Kubwa, Abuja.
+                            Suit 10, WABP Plaza  Amayo Adedevoh Way, Plot No:175 Cadastral Zone B08, Jahi, Abuja
                           </p>
                         )
                       }
