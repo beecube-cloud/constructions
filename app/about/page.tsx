@@ -27,10 +27,12 @@ export default function About() {
         return () => observer.disconnect();
       }, []);
   return (
+    <>
           <SectionWithLineDecorator sectionRef={sectionRef} backgroundColor="white">
             <AboutSection textheading="text-white" textcontent="text-gray-300" backgroundColor="bg-[#0A1236]/95" />
             <TeamSectionAnimated members={teamMembers} />
             <MessageFromCEO />
           </SectionWithLineDecorator>
+     </>
   );
 }

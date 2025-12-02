@@ -14,7 +14,10 @@ export default function sectionWithLineDecorator(
 ) {
 
   return (
-    <div ref={sectionRef} className={`w-full min-h-screen ${backgroundColor} via-blue-50  py-24 relative overflow-hidden`}>
+    <div ref={sectionRef} className={`w-full min-h-screen ${backgroundColor} via-blue-50   relative overflow-hidden`}>
+      <div className=''>
+
+
       {/* Left decorative line SVG */}
       <div className="absolute left-0 top-0 h-full opacity-15">
         <Image
@@ -39,6 +42,7 @@ export default function sectionWithLineDecorator(
         />
       </div>
       {children}
+      </div>
     </div>
   )
 }
