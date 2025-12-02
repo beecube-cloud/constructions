@@ -104,8 +104,8 @@ const ContactSection = ({
   return (
     <SectionWithLineDecorator sectionRef={sectionRef} backgroundColor={backgroundColor}>
 
-      <div className="max-w-7xl mx-auto relative z-10">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+      <div className="max-w-7xl mx-auto relative z-10 py-24 px-4">
+              <div className="grid gri d-cols-1 lg:grid-cols-2 gap-16 items-start">
                 <div className="space-y-8">
                   <div className={`transition-all duration-1000 ${
                     isVisible 
