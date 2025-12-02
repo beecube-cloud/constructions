@@ -58,12 +58,13 @@ const AboutSection = ({
   }, [scrollPosition]);
 
   const images = [
-    "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400&h=600&fit=crop",
-    "https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=400&h=600&fit=crop",
-    "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=400&h=600&fit=crop",
-    "https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=400&h=600&fit=crop",
-    "https://images.unsplash.com/photo-1590642916589-592bca10dfbf?w=400&h=600&fit=crop",
-    "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=400&h=600&fit=crop",
+    "/assets/projects/bima/image1.webp",
+    "/assets/projects/enclave/image12.webp",
+    "/assets/projects/phMansion/image5.webp",
+    "/assets/projects/ethanolFactory/image1.webp",
+    "/assets/projects/hotr/image1.webp",
+    "/assets/projects/phMansion/image1.webp",
+ 
   ];
 
   // Duplicate images for seamless infinite scroll

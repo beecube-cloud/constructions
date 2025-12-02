@@ -46,14 +46,13 @@ export default function NavbarScrollWithLogo() {
           {/* Logo with Image */}
           <Link href="/" className="flex items-center space-x-2 z-10">
             <Image
-              src="/assets/logo.svg" 
+              src="/assets/esthoj.svg" 
               alt="Esthoj Logo"
-              width={40}
+              width={200}
               height={40}
               className="object-contain"
               priority
             />
-            <span className="text-white text-2xl font-semibold">Esthoj</span>
           </Link>
 
           {/* Desktop Navigation */}
