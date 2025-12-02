@@ -60,10 +60,10 @@ const AboutSection = ({
   const images = [
     "/assets/projects/bima/image1.webp",
     "/assets/projects/enclave/image12.webp",
-    "/assets/projects/phMansion/image5.webp",
+    "/assets/projects/phmansion/image5.webp",
     "/assets/projects/ethanolFactory/image1.webp",
     "/assets/projects/hotr/image1.webp",
-    "/assets/projects/phMansion/image1.webp",
+    "/assets/projects/phmansion/image1.webp",
  
   ];
 
