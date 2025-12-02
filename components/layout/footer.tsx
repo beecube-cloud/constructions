@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 
 interface FooterLink {
   name: string;
@@ -72,15 +73,14 @@ export default function CustomizableFooter({
           <div className="space-y-8">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10">
-                <div className="grid grid-cols-2 gap-0.5 w-10 h-10">
-                  <div className="bg-red-600 rounded-tl"></div>
-                  <div className="bg-red-600 rounded-tr"></div>
-                  <div className="bg-blue-600 rounded-bl"></div>
-                  <div className="bg-red-600 rounded-br"></div>
-                </div>
-              </div>
-              <span className="text-2xl font-semibold">{logoText}</span>
+            <Image
+              src="/assets/esthoj.svg" 
+              alt="Esthoj Logo"
+              width={200}
+              height={40}
+              className="object-contain"
+              priority
+            />
             </Link>
 
             {/* Tagline */}
