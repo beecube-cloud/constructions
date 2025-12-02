@@ -100,11 +100,11 @@ export function HeroSection({
             </div>
           )}
 
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
             {heading}
           </h1>
 
-          <p className={`text-lg md:text-xl text-gray-300 mb-10 leading-relaxed ${textAlign === 'center' ? 'max-w-3xl mx-auto' : 'max-w-2xl'}`}>
+          <p className={`text-sm md:text-xl text-gray-300 mb-10 leading-relaxed ${textAlign === 'center' ? 'max-w-3xl mx-auto' : 'max-w-2xl'}`}>
             {description}
           </p>
 
