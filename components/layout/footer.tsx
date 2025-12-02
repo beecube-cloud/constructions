@@ -74,7 +74,7 @@ export default function CustomizableFooter({
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2">
             <Image
-              src="/assets/esthoj.svg" 
+              src="/assets/esthoj-variant.svg" 
               alt="Esthoj Logo"
               width={200}
               height={40}
