@@ -95,12 +95,12 @@ export const parallaxImages: ParallaxImage[] = [
       date: "13th April, 2025",
       description: 'A grand luxury residence featuring neoclassical architectural design, highlighted by tall Corinthian columns, a marble-finished fountain court, and refined exterior detailing that reflects elegance and craftsmanship.',
       images: [
-        "/assets/projects/phMansion/image1.webp",
-        "/assets/projects/phMansion/image2.webp",
-        "/assets/projects/phMansion/image3.webp",
-        "/assets/projects/phMansion/image4.webp",
-        "/assets/projects/phMansion/image5.webp",
-        "/assets/projects/phMansion/image6.webp",
+        "/assets/projects/phmansion/image1.webp",
+        "/assets/projects/phmansion/image2.webp",
+        "/assets/projects/phmansion/image3.webp",
+        "/assets/projects/phmansion/image4.webp",
+        "/assets/projects/phmansion/image5.webp",
+        "/assets/projects/phmansion/image6.webp",
       ],
     },
     {
