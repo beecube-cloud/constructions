@@ -76,7 +76,7 @@ export const parallaxImages: ParallaxImage[] = [
   export const projectsList = [
     {
       slug: 'citec',
-      title: "Citec Luxury TD Interior",
+      title: "Private Client Luxury TD Interior",
       date: "25th February, 2025",
       description: 'Design and Build project for a luxury TD interior',
       images: [
@@ -232,9 +232,9 @@ export const parallaxImages: ParallaxImage[] = [
     },
     {
       slug: 'new_citec',
-      title: "New Citec 4B Duplex 3D",
+      title: "Private Client 4B Duplex 3D",
       date: "25th February, 2025",
-      description: 'Citec New 4B Duplex 3D',
+      description: 'Private Client 4B Duplex 3D',
       images: [
         "/assets/projects/new_citec/image1.webp",
         "/assets/projects/new_citec/image2.webp",
@@ -252,9 +252,9 @@ export const parallaxImages: ParallaxImage[] = [
     },
     {
       slug: 'citec_luxury',
-      title: "Citec Luxury Terrance Duplex 3D ",
+      title: "Private Client Luxury Terrance Duplex 3D ",
       date: "25th February, 2025",
-      description: 'Citec New 4B Duplex 3D',
+      description: 'Private Client 4B Duplex 3D',
       images: [
         "/assets/projects/citex_luxury/image1.webp",
         "/assets/projects/citex_luxury/image2.webp",
@@ -273,9 +273,9 @@ export const parallaxImages: ParallaxImage[] = [
     },
     {
       slug: 'facade',
-      title: "Facade Remodelling",
+      title: "Private Client",
       date: "25th February, 2025",
-      description: 'Facade remodelling project',
+      description: 'Private Client project',
       images: [
         "/assets/projects/facade/image1.webp",
         "/assets/projects/facade/image2.webp",

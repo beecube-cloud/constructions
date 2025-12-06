@@ -1,8 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
-import { Zap, Network, Hammer, Users, Settings } from "lucide-react";
-import { PiBuildingOfficeLight } from "react-icons/pi";
-import { SlEnergy } from "react-icons/sl";
+import { useEffect, useRef, useState } from "react";
 
 const ServicesSection = () => {
   const [isVisible, setIsVisible] = useState(false);
