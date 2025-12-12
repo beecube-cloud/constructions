@@ -104,7 +104,7 @@ export function HeroSection({
             {heading}
           </h1>
 
-          <p className={`text-sm md:text-xl text-gray-300 mb-10 leading-relaxed ${textAlign === 'center' ? 'max-w-3xl mx-auto' : 'max-w-2xl'}`}>
+          <p className={`text-sm md:text-xl text-white mb-10 bg-black/50 p-4 rounded-lg leading-relaxed ${textAlign === 'center' ? 'max-w-3xl mx-auto' : 'max-w-2xl'}`}>
             {description}
           </p>
 
@@ -206,7 +206,7 @@ export function HeroSingleImageExample() {
       description="Engineering Construction & Facility Management has translated client visions into durable, sustainable infrastructure, from commercial and residential developments to roads, energy and facility services."
       buttons={divisionButtons}
       backgroundColor="#1A1F4E"
-      backgroundImage="/assets/hero/herobg.svg"
+      backgroundImage="/assets/home/home-image1.webp"
       textAlign="center"
       overlay={true}
       overlayOpacity={60}
