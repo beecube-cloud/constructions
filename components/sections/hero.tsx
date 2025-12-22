@@ -86,7 +86,7 @@ export function HeroSection({
       )}
 
 
-      <div className={`relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full ${textAlignClass}`}>
+      <div className={`relative bg-black/50 p-4 rounded-lg  z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full ${textAlignClass}`}>
         <div className={`flex flex-col items-${textAlign === 'center' ? 'center' : 'start'} max-w-5xl ${textAlign === 'center' ? 'mx-auto' : ''}`}>
 
           {brandLabel && (
@@ -104,7 +104,7 @@ export function HeroSection({
             {heading}
           </h1>
 
-          <p className={`text-sm md:text-xl text-white mb-10 bg-black/50 p-4 rounded-lg leading-relaxed ${textAlign === 'center' ? 'max-w-3xl mx-auto' : 'max-w-2xl'}`}>
+          <p className={`text-sm md:text-xl text-white mb-10 leading-relaxed ${textAlign === 'center' ? 'max-w-3xl mx-auto' : 'max-w-2xl'}`}>
             {description}
           </p>
 
