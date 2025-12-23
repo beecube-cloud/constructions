@@ -116,7 +116,7 @@ const ServicesSection = () => {
 
 
             return (
-              <Link href={`/services/${service.slug}`} className="block">
+              <Link href={`/services/${service.slug}`} className="block" key={index}>
 
               <div
                 key={index}
