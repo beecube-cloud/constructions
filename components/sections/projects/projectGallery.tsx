@@ -8,6 +8,16 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 export default function ProjectGallery({ images }: { images: string[] }) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
+  const next = () => {
+    if (activeIndex === null) return;
+    setActiveIndex((activeIndex + 1) % images.length);
+  };
+
+  const prev = () => {
+    if (activeIndex === null) return;
+    setActiveIndex((activeIndex - 1 + images.length) % images.length);
+  };
+
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       if (activeIndex === null) return;
@@ -21,15 +31,9 @@ export default function ProjectGallery({ images }: { images: string[] }) {
     return () => window.removeEventListener("keydown", handler);
   }, [activeIndex]);
 
-  const next = () => {
-    if (activeIndex === null) return;
-    setActiveIndex((activeIndex + 1) % images.length);
-  };
 
-  const prev = () => {
-    if (activeIndex === null) return;
-    setActiveIndex((activeIndex - 1 + images.length) % images.length);
-  };
+
+
 
   return (
     <>

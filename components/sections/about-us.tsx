@@ -107,8 +107,8 @@ const AboutSection = ({
                   OUR MISSION
                 </h3>
                 <p className={`${textcontent} leading-relaxed`}>
-                  To develop, build and service Nigeria's physical
-                  infrastructure for living, working and traveling.
+                  {`To develop, build and service Nigeria's physical
+                  infrastructure for living, working and traveling.`}
                 </p>
               </div>
 

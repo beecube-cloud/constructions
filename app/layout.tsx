@@ -4,6 +4,7 @@ import Footer from "@/components/layout/footer";
 import Navbar from "@/components/layout/main-nav";
 
 import "./globals.css";
+import WhatsAppButton from "@/components/ui/whatsapp-button";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,6 +39,7 @@ export default function RootLayout({
           <Navbar />
         {children}
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );

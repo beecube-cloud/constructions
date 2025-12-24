@@ -1,8 +1,6 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
-import { Zap, Network, Hammer, Users, Settings } from "lucide-react";
-import { PiBuildingOfficeLight } from "react-icons/pi";
-import { SlEnergy } from "react-icons/sl";
+import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 
 const ServicesSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -15,6 +13,7 @@ const ServicesSection = () => {
       title: "Building & Civil Construction",
       description: "commercial, residential, hotels & leisure, industrial.",
       color: "bg-primary",
+      slug: "building-civil-construction",
     },
     {
       icon: "/icons/energy.png",
@@ -22,18 +21,21 @@ const ServicesSection = () => {
       description:
         "mechanical, electrical, energy management, commissioning and decommissioning.",
       color: "bg-primary",
+      slug: "me-energy",
     },
     {
       icon: "/icons/microservices.png",
       title: "Infrastructure",
       description: "roads, bridges, rail, tunnels, ports and heavy foundations",
       color: "bg-primary",
+      slug: "infrastructure",
     },
     {
       icon: "/icons/design.png",
       title: "Design & Build / Pre-construction",
       description: "feasibility, design, cost planning and procurement.",
       color: "bg-primary",
+      slug: "design-build",
     },
     {
       icon: "/icons/c-r-m-services.png",
@@ -41,6 +43,7 @@ const ServicesSection = () => {
       description:
         "soft & hard FM, security, pest control, equipment sale/hire and maintenance.",
       color: "bg-primary",
+      slug: "facility-management",
     },
     {
       icon: "/icons/settings.png",
@@ -48,6 +51,7 @@ const ServicesSection = () => {
       description:
         "seismic assessments, structural repairs, wastewater and energy consultancy.",
       color: "bg-primary",
+      slug: "specialist-services",
     },
   ];
 
@@ -110,7 +114,10 @@ const ServicesSection = () => {
           {services.map((service, index) => {
             const isItemVisible = visibleItems.includes(index);
 
+
             return (
+              <Link href={`/services/${service.slug}`} className="block" key={index}>
+
               <div
                 key={index}
                 className={`bg-white rounded-2xl p-4 sm:p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 sm:hover:-translate-y-2 transition-all duration-500 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 group cursor-pointer ${
@@ -140,6 +147,8 @@ const ServicesSection = () => {
                   </p>
                 </div>
               </div>
+              </Link>
+
             );
           })}
         </div>
