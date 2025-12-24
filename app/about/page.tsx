@@ -6,7 +6,6 @@ import { TeamSectionAnimated } from "@/components/sections/teamMembers";
 import { teamMembers } from "@/lib/consts";
 import SectionWithLineDecorator from "@/sections/sectionWithLineDecorator";
 import { useEffect, useRef } from "react";
-import { RiFacebookBoxFill } from "react-icons/ri";
 
 export default function About() {
 

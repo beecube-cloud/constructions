@@ -1,5 +1,4 @@
 import ContactSection from "@/components/sections/contact-us";
-import { RiFacebookBoxFill } from "react-icons/ri";
 
 export default function Contact() {
   return (
