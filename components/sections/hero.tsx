@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { useScrollParallax } from '@/hooks/useScrollParallax';
 import { HeroSectionProps, ParallaxImage, HeroButtonProps } from '@/lib/types';
 import { divisionButtons, mainButtons, parallaxImages } from '@/lib/consts';
-// Removed lucide-react import - using SVG arrows instead
+
 
 export function HeroSection({
   variant = 'single-image',
@@ -18,7 +18,7 @@ export function HeroSection({
   buttons,
   backgroundColor = '#0A1236',
   backgroundImage,
-  backgroundImages, // New: array of images for slider
+  backgroundImages, 
   backgroundVideo,
   parallaxImages,
   textAlign = 'center',
@@ -27,9 +27,9 @@ export function HeroSection({
   minHeight = 'min-h-screen',
   className = '',
   customContent,
-  sliderInterval = 5000, // New: auto-advance interval in ms
-  showSliderControls = true, // New: show/hide navigation arrows
-  showSliderDots = true, // New: show/hide dots
+  sliderInterval = 5000,
+  showSliderControls = true,
+  showSliderDots = true, 
 }: HeroSectionProps) {
   const scrollY = useScrollParallax();
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -38,7 +38,7 @@ export function HeroSection({
   const textAlignClass = textAlign === 'center' ? 'text-center' : 'text-left';
   const justifyClass = textAlign === 'center' ? 'justify-center' : 'justify-start';
 
-  // Auto-advance slider
+
   useEffect(() => {
     if (variant === 'slider' && backgroundImages && backgroundImages.length > 1) {
       const timer = setInterval(() => {
