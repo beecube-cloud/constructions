@@ -6,7 +6,6 @@ export const parallaxImages: ParallaxImage[] = [
       alt: 'Construction workers',
       position: 'top-left',
       width: 'w-72',
-      height: 'h-80',
       speed: 0.15,
     },
     {
@@ -14,7 +13,6 @@ export const parallaxImages: ParallaxImage[] = [
       alt: 'Business meeting',
       position: 'top-right',
       width: 'w-80',
-      height: 'h-64',
       speed: 0.25,
     },
     {
@@ -22,7 +20,6 @@ export const parallaxImages: ParallaxImage[] = [
       alt: 'Office workspace',
       position: 'bottom-left',
       width: 'w-1/3',
-      height: 'h-72',
       speed: 0.2,
     },
     {
@@ -30,7 +27,6 @@ export const parallaxImages: ParallaxImage[] = [
       alt: 'Engineering work',
       position: 'bottom-right',
       width: 'w-80',
-      height: 'h-96',
       speed: 0.3,
     },
   ];
