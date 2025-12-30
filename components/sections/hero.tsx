@@ -1,13 +1,13 @@
 'use client';
 
-import { ReactNode } from 'react';
+import { ReactNode, useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { useScrollParallax } from '@/hooks/useScrollParallax';
 import { HeroSectionProps, ParallaxImage, HeroButtonProps } from '@/lib/types';
 import { divisionButtons, mainButtons, parallaxImages } from '@/lib/consts';
-
+// Removed lucide-react import - using SVG arrows instead
 
 export function HeroSection({
   variant = 'single-image',
@@ -18,6 +18,7 @@ export function HeroSection({
   buttons,
   backgroundColor = '#0A1236',
   backgroundImage,
+  backgroundImages, // New: array of images for slider
   backgroundVideo,
   parallaxImages,
   textAlign = 'center',
@@ -26,18 +27,119 @@ export function HeroSection({
   minHeight = 'min-h-screen',
   className = '',
   customContent,
+  sliderInterval = 5000, // New: auto-advance interval in ms
+  showSliderControls = true, // New: show/hide navigation arrows
+  showSliderDots = true, // New: show/hide dots
 }: HeroSectionProps) {
   const scrollY = useScrollParallax();
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   const textAlignClass = textAlign === 'center' ? 'text-center' : 'text-left';
   const justifyClass = textAlign === 'center' ? 'justify-center' : 'justify-start';
+
+  // Auto-advance slider
+  useEffect(() => {
+    if (variant === 'slider' && backgroundImages && backgroundImages.length > 1) {
+      const timer = setInterval(() => {
+        nextSlide();
+      }, sliderInterval);
+
+      return () => clearInterval(timer);
+    }
+  }, [currentSlide, variant, backgroundImages, sliderInterval]);
+
+  const nextSlide = () => {
+    if (!backgroundImages || isTransitioning) return;
+    setIsTransitioning(true);
+    setCurrentSlide((prev) => (prev + 1) % backgroundImages.length);
+    setTimeout(() => setIsTransitioning(false), 500);
+  };
+
+  const previousSlide = () => {
+    if (!backgroundImages || isTransitioning) return;
+    setIsTransitioning(true);
+    setCurrentSlide((prev) => (prev - 1 + backgroundImages.length) % backgroundImages.length);
+    setTimeout(() => setIsTransitioning(false), 500);
+  };
+
+  const goToSlide = (index: number) => {
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setCurrentSlide(index);
+    setTimeout(() => setIsTransitioning(false), 500);
+  };
 
   return (
     <section
       className={`relative ${minHeight} overflow-hidden flex items-center ${className}`}
       style={{ backgroundColor }}
     >
+      {/* Slider Variant */}
+      {variant === 'slider' && backgroundImages && (
+        <div className="absolute inset-0">
+          {backgroundImages.map((image, index) => (
+            <div
+              key={index}
+              className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
+                index === currentSlide ? 'opacity-100' : 'opacity-0'
+              }`}
+            >
+              <Image
+                src={image}
+                alt={`Slide ${index + 1}`}
+                fill
+                className="object-cover"
+                priority={index === 0}
+              />
+            </div>
+          ))}
 
+          {/* Slider Controls */}
+          {showSliderControls && backgroundImages.length > 1 && (
+            <>
+              <button
+                onClick={previousSlide}
+                className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 backdrop-blur-sm p-3 rounded-full transition-all duration-200"
+                aria-label="Previous slide"
+              >
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <button
+                onClick={nextSlide}
+                className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 backdrop-blur-sm p-3 rounded-full transition-all duration-200"
+                aria-label="Next slide"
+              >
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </>
+          )}
+
+          {/* Slider Dots */}
+          {showSliderDots && backgroundImages.length > 1 && (
+            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+              {backgroundImages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goToSlide(index)}
+                  className={`transition-all duration-300 rounded-full ${
+                    index === currentSlide
+                      ? 'bg-white w-8 h-3'
+                      : 'bg-white/50 hover:bg-white/70 w-3 h-3'
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Parallax Variant */}
       {variant === 'parallax' && parallaxImages && (
         <div className="absolute inset-0 pointer-events-none">
           {parallaxImages.map((img, index) => (
@@ -50,7 +152,7 @@ export function HeroSection({
         </div>
       )}
 
-
+      {/* Single Image Variant */}
       {variant === 'single-image' && backgroundImage && (
         <div className="absolute inset-0">
           <Image
@@ -63,6 +165,7 @@ export function HeroSection({
         </div>
       )}
 
+      {/* Video Variant */}
       {variant === 'video' && backgroundVideo && (
         <div className="absolute inset-0">
           <video
@@ -77,7 +180,7 @@ export function HeroSection({
         </div>
       )}
 
-
+      {/* Overlay */}
       {overlay && (
         <div
           className="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-black/60 pointer-events-none"
@@ -85,8 +188,8 @@ export function HeroSection({
         />
       )}
 
-
-      <div className={`relative bg-black/50 p-4 rounded-lg  z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full ${textAlignClass}`}>
+      {/* Content */}
+      <div className={`relative bg-black/50 p-4 rounded-lg z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full ${textAlignClass}`}>
         <div className={`flex flex-col items-${textAlign === 'center' ? 'center' : 'start'} max-w-5xl ${textAlign === 'center' ? 'mx-auto' : ''}`}>
 
           {brandLabel && (
@@ -196,21 +299,47 @@ function HeroButton({ text, href, variant = 'primary' }: HeroButtonProps) {
   );
 }
 
-export function HeroSingleImageExample() {
+// Example usage with slider
+export function HeroSliderExample() {
   return (
     <HeroSection
-      variant="single-image"
+      variant="slider"
       brandLabel="Esthoj Construction & Facility Management"
       brandIcon="/assets/hero/dot.svg"
       heading="Shaping Infrastructure. Strengthening Communities."
       description="Engineering Construction & Facility Management has translated client visions into durable, sustainable infrastructure, from commercial and residential developments to roads, energy and facility services."
       buttons={divisionButtons}
       backgroundColor="#1A1F4E"
-      backgroundImage="/assets/home/home-image1.webp"
+      backgroundImages={[
+        '/assets/home/hero-city.webp',
+        '/assets/home/home-image1.webp',
+        '/assets/home/home-image2.webp',
+      ]}
       textAlign="center"
       overlay={true}
       overlayOpacity={60}
+      sliderInterval={5000}
+      showSliderControls={true}
+      showSliderDots={true}
     />
   );
 }
 
+// Original single image example
+// export function HeroSingleImageExample() {
+//   return (
+//     <HeroSection
+//       variant="single-image"
+//       brandLabel="Esthoj Construction & Facility Management"
+//       brandIcon="/assets/hero/dot.svg"
+//       heading="Shaping Infrastructure. Strengthening Communities."
+//       description="Engineering Construction & Facility Management has translated client visions into durable, sustainable infrastructure, from commercial and residential developments to roads, energy and facility services."
+//       buttons={divisionButtons}
+//       backgroundColor="#1A1F4E"
+//       backgroundImage="/assets/home/home-image1.webp"
+//       textAlign="center"
+//       overlay={true}
+//       overlayOpacity={60}
+//     />
+//   );
+// }

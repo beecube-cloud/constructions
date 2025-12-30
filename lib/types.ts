@@ -10,37 +10,31 @@ export interface HeroButton {
     src: string;
     alt: string;
     position: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
-    width?: string;
-    height?: string;
     speed?: number;
+    width?: string;
   }
-  
-  export interface HeroSectionProps {
 
-    variant?: 'parallax' | 'single-image' | 'video';
-    
-    // Content
+  export interface HeroSectionProps {
+    variant?: 'parallax' | 'single-image' | 'video' | 'slider'; // Added 'slider'
     brandLabel?: string;
     brandIcon?: string;
     heading: string;
     description: string;
-    buttons?: HeroButton[];
-    
-    // Background options
+    buttons?: HeroButtonProps[];
     backgroundColor?: string;
-    backgroundImage?: string;
+    backgroundImage?: string; 
+    backgroundImages?: string[]; 
     backgroundVideo?: string;
     parallaxImages?: ParallaxImage[];
-    
-    // Styling
-    textAlign?: 'left' | 'center';
+    textAlign?: 'center' | 'left';
     overlay?: boolean;
     overlayOpacity?: number;
     minHeight?: string;
     className?: string;
-    
-    // Custom content
     customContent?: ReactNode;
+    sliderInterval?: number; 
+    showSliderControls?: boolean; 
+    showSliderDots?: boolean;
   }
 
   export interface HeroButtonProps {
