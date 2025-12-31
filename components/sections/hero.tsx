@@ -312,6 +312,8 @@ export function HeroSliderExample() {
       backgroundColor="#1A1F4E"
       backgroundImages={[
         '/assets/home/hero-city.webp',
+        '/assets/home/hero-city5.webp',
+        '/assets/home/hero-city6.webp',
         '/assets/home/home-image1.webp',
         '/assets/home/home-image2.webp',
       ]}
