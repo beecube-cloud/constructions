@@ -123,26 +123,42 @@ Our Design & Build services combine early-stage planning, technical expertise an
   `
     },
   
-    "specialist-services": {
-      title: "Specialist Services",
+"specialist-services": {
+      title: "Specialist Commercial Services",
       description:
-        "Seismic assessments, structural repairs, wastewater and energy consultancy.",
-        content: `
-        Our Specialist Services provide targeted, high-skill technical expertise for complex or high-risk infrastructure and environmental challenges.
-        
-        ### Specialist Capabilities
-        - Seismic assessments & structural integrity evaluations  
-        - Remedial engineering & specialist structural repairs  
-        - Wastewater treatment engineering & system optimization  
-        - Energy consultancy, audits & decarbonization strategies  
-        - Failure diagnosis, condition surveys & asset life extension  
-        
-        ### Why Clients Choose Our Specialists
-        - Deep technical knowledge  
-        - Precision assessments & solutions  
-        - Regulatory-compliant engineering practices  
-        - Cost-effective interventions that extend asset life  
-        `
+        "Insolvency support, loss adjusting, commercial audits, and contract consultancy for construction and engineering industries.",
+      content: `
+Our Specialist Commercial Services provide expert guidance across the full spectrum of construction and engineering commercial challenges, from insolvency to contract disputes.
+
+### Insolvency Services
+Services provided for insolvency practitioners cover a wide range including advising on the realistic value of contracts and claims, carrying out financial investigations, work-in-progress calculations, management of 'build-outs', negotiation of novations, negotiation and collection of debts, and preparation of associated reports. Our detailed knowledge of the construction and engineering industries ensures the accuracy of our reviews, assessments and valuations, enabling clients to maximize realized assets.
+
+### Loss Adjusting
+Esthoj Multi-Disciplinary Consulting Services Limited is commissioned by loss adjusters to assist with some of the most complex construction losses. Uniquely, we combine construction consultancy skills, knowledge of loss adjustment in construction, and hands-on experience of contracting. As a result, insurers and loss adjusters have complete confidence in our multi-discipline advice and expertise.
+
+### Commercial Audits
+Many of the commercial audits that we undertake are initiated by financial institutions seeking an independent view of the activities of a construction or engineering business they are proposing to lend or invest in. A commercial audit covers many aspects of a business's activities including tendering, procurement, planning, surveying (including internal valuation procedures), site management skills and project management systems. The audit does not replace an accountant's financial audit but rather acts as an important complementary technical report. Our client portfolio includes several major banks for whom we have successfully completed audits on major contractors, developers and specialist sub-contractors.
+
+### Claims & Contract Consultancy
+The success of a claim—its speedy, amicable and acceptable resolution—depends very largely upon its preparation and presentation. It should be clear, readable, logically argued and substantiated by recorded facts. It must convey possibly complex issues in a manner that can be readily understood so that a clear conclusion can be reached.
+
+Our expertise is rooted in and enhanced by over a decade of experience analysing hundreds of contract claims. Given our specialized knowledge and independent position, we can often reach the core of a problem far more quickly than those who have been more closely or emotionally involved with the situation. We identify possible options and, working closely with our client, provide commercially astute solutions. At an early stage, we give an objective assessment of the strengths and weaknesses of your case and the likely costs involved.
+
+### Negotiation & Dispute Resolution
+If negotiations are to be successful in bringing about a satisfactory commercial settlement of a claim, it is imperative that the negotiator understands the tactics and psychology involved. We have experienced negotiators trained in mediation and conciliation, and we make every effort to avoid the escalation of a dispute.
+
+### Leadership & Project Management
+We value our people and ensure that human management capabilities fully complement our technical skills. Building and positively sustaining project team relationships through the often lengthy duration of works is key to a successful project. We bring leadership to the construction team and cultivate a positive and creative environment that encourages innovation and maximizes investment returns.
+
+### Advisory Services
+Our advisory services team brings together a range of expertise and experience across a wide variety of procurement routes. This knowledge can be applied to the development of highly complex infrastructure projects and programmes. We provide consulting and management services to both public and private sectors during inception, feasibility, tender process, construction and operational phases with an in-depth understanding of the whole lifecycle process.
+
+### Due Diligence & Project Monitoring
+We specialize in identifying and mitigating risk in property development transactions. With in-depth insight and experience within the property and construction industry, Esthoj Consults fully understands the risks associated with lending to property development transactions.
+
+### Technical Capabilities
+Our specialist teams are made up of highly qualified construction professionals with considerable relevant experience worldwide. Many of our consultants have held senior management positions in construction and engineering organizations, enabling them to recognize and analyze complex commercial and contractual issues sensitively and comprehensively. Our capabilities span petro-chemical and offshore installations, building, civil/structural engineering, mechanical and electrical engineering, and heavy and process/production engineering.
+      `
     }
   };
   

@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { useScrollParallax } from '@/hooks/useScrollParallax';
 import { HeroSectionProps, ParallaxImage, HeroButtonProps } from '@/lib/types';
-import { divisionButtons, mainButtons, parallaxImages } from '@/lib/consts';
+import { divisionButtons } from '@/lib/consts';
 
 
 export function HeroSection({
