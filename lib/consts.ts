@@ -353,6 +353,96 @@ export const parallaxImages: ParallaxImage[] = [
       ],
     },
 
+    {
+      slug: 'cbn',
+      title: "Private Client",
+      date: "25th February, 2025",
+      description: 'Private Client project',
+      images: [
+        "/assets/projects/cbn/image1.webp",
+        "/assets/projects/cbn/image2.webp",
+        "/assets/projects/cbn/image3.webp",
+        "/assets/projects/cbn/image4.webp",
+        "/assets/projects/cbn/image5.webp",
+        "/assets/projects/cbn/image6.webp",
+        "/assets/projects/cbn/image7.webp",
+        "/assets/projects/cbn/image8.webp",
+        "/assets/projects/cbn/image9.webp",
+        "/assets/projects/cbn/image10.webp",
+      ],
+    },
+
+    {
+      slug: 'lagos-tower-project',
+      title: "Private Client",
+      date: "25th February, 2025",
+      description: 'Private Client project',
+      images: [
+        "/assets/projects/lagos-tower-project/image1.webp",
+        "/assets/projects/lagos-tower-project/image2.webp",
+        "/assets/projects/lagos-tower-project/image3.webp",
+        "/assets/projects/lagos-tower-project/image4.webp",
+        "/assets/projects/lagos-tower-project/image5.webp",
+        "/assets/projects/lagos-tower-project/image7.webp",
+        "/assets/projects/lagos-tower-project/image8.webp",
+        "/assets/projects/lagos-tower-project/image9.webp",
+        "/assets/projects/lagos-tower-project/image10.webp",
+        "/assets/projects/lagos-tower-project/image11.webp",
+        "/assets/projects/lagos-tower-project/image13.webp",
+        "/assets/projects/lagos-tower-project/image14.webp",
+      ],
+    },
+
+    // nedd to add the rest of the picture 
+
+    {
+      slug: 'mtn-durumi',
+      title: "MTN Switch Durum",
+      date: "25th February, 2025",
+      description: 'MTN Switch Durumi',
+      images: [
+        "/assets/projects/mtn-durumi/image1.webp",
+        "/assets/projects/mtn-durumi/image2.webp",
+        "/assets/projects/mtn-durumi/image3.webp",
+        "/assets/projects/mtn-durumi/image4.webp",
+        "/assets/projects/mtn-durumi/image5.webp",
+        "/assets/projects/mtn-durumi/image6.webp",
+        "/assets/projects/mtn-durumi/image7.webp",
+        "/assets/projects/mtn-durumi/image8.webp",
+        "/assets/projects/mtn-durumi/image9.webp",
+        "/assets/projects/mtn-durumi/image10.webp",
+        "/assets/projects/mtn-durumi/image11.webp",
+        "/assets/projects/mtn-durumi/image12.webp",
+        "/assets/projects/mtn-durumi/image13.webp",
+        "/assets/projects/mtn-durumi/image14.webp",
+        "/assets/projects/mtn-durumi/image15.webp",
+        "/assets/projects/mtn-durumi/image16.webp",
+      ],
+
+    },
+
+    {
+      slug: 'ph-mtn-center',
+      title: "Private Client",
+      date: "25th February, 2025",
+      description: 'Private Client project',
+      images: [
+        "/assets/projects/ph-mtn-center/image1.webp",
+        "/assets/projects/ph-mtn-center/image2.webp",
+        "/assets/projects/ph-mtn-center/image3.webp",
+        "/assets/projects/ph-mtn-center/image4.webp",
+        "/assets/projects/ph-mtn-center/image5.webp",
+        "/assets/projects/ph-mtn-center/image7.webp",
+        "/assets/projects/ph-mtn-center/image8.webp",
+        "/assets/projects/ph-mtn-center/image9.webp",
+        "/assets/projects/ph-mtn-center/image10.webp",
+        "/assets/projects/ph-mtn-center/image11.webp",
+        "/assets/projects/ph-mtn-center/image13.webp",
+        "/assets/projects/ph-mtn-center/image14.webp",
+      ],
+    },
+    
+
   ];
 
 
@@ -391,3 +481,4 @@ export const parallaxImages: ParallaxImage[] = [
   ];
   
   
+
