@@ -44,15 +44,7 @@ const ServicesSection = () => {
         "soft & hard FM, security, pest control, equipment sale/hire and maintenance.",
       color: "bg-primary",
       slug: "facility-management",
-    },
-    {
-      icon: "/icons/settings.png",
-      title: "Specialist Services",
-      description:
-        "seismic assessments, structural repairs, wastewater and energy consultancy.",
-      color: "bg-primary",
-      slug: "specialist-services",
-    },
+    }
   ];
 
   useEffect(() => {
