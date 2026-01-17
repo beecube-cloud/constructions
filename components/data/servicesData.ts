@@ -121,28 +121,6 @@ Our Design & Build services combine early-stage planning, technical expertise an
   - Cost Effectiveness  
   - Scalable Across Sectors  
   `
-    },
-  
-    "specialist-services": {
-      title: "Specialist Services",
-      description:
-        "Seismic assessments, structural repairs, wastewater and energy consultancy.",
-        content: `
-        Our Specialist Services provide targeted, high-skill technical expertise for complex or high-risk infrastructure and environmental challenges.
-        
-        ### Specialist Capabilities
-        - Seismic assessments & structural integrity evaluations  
-        - Remedial engineering & specialist structural repairs  
-        - Wastewater treatment engineering & system optimization  
-        - Energy consultancy, audits & decarbonization strategies  
-        - Failure diagnosis, condition surveys & asset life extension  
-        
-        ### Why Clients Choose Our Specialists
-        - Deep technical knowledge  
-        - Precision assessments & solutions  
-        - Regulatory-compliant engineering practices  
-        - Cost-effective interventions that extend asset life  
-        `
     }
   };
   

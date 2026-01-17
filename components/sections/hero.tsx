@@ -305,7 +305,7 @@ export function HeroSliderExample() {
     <HeroSection
       variant="slider"
       brandLabel="Esthoj Construction & Facility Management"
-      brandIcon="/assets/hero/dot.svg"
+      brandIcon="/assets/logo.svg"
       heading="Shaping Infrastructure. Strengthening Communities."
       description="Engineering Construction & Facility Management has translated client visions into durable, sustainable infrastructure, from commercial and residential developments to roads, energy and facility services."
       buttons={divisionButtons}
