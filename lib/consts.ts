@@ -293,9 +293,9 @@ export const parallaxImages: ParallaxImage[] = [
     },
     {
       slug: 'mtn-enugu',
-      title: "Private Client",
+      title: "MTN Regional Office , Kano and Port Harcourt",
       date: "25th February, 2025",
-      description: 'Private Client project',
+      description: 'MTN Regional Office , Kano and Port Harcourt',
       images: [
         "/assets/projects/mtn-enugu/image1.webp",
         "/assets/projects/mtn-enugu/image2.webp",
@@ -310,9 +310,9 @@ export const parallaxImages: ParallaxImage[] = [
     },
     {
       slug: 'panda-agric',
-      title: "Private Client",
+      title: "Panda Agric Project",
       date: "25th February, 2025",
-      description: 'Private Client project',
+      description: 'Panda Agric Project',
       images: [
         "/assets/projects/panda-agric/image1.webp",
         "/assets/projects/panda-agric/image2.webp",
@@ -330,9 +330,9 @@ export const parallaxImages: ParallaxImage[] = [
 
     {
       slug: 'akure-hotel',
-      title: "Private Client",
+      title: "BON Hotel, Akure",
       date: "25th February, 2025",
-      description: 'Private Client project',
+      description: 'BON Hotel, Akure',
       images: [
         "/assets/projects/akure-hotel/image1.webp",
         "/assets/projects/akure-hotel/image2.webp",
@@ -423,9 +423,9 @@ export const parallaxImages: ParallaxImage[] = [
 
     {
       slug: 'ph-mtn-center',
-      title: "Private Client",
+      title: "MTN PH  Experience Centre",
       date: "25th February, 2025",
-      description: 'Private Client project',
+      description: 'MTN PH  Experience Centre',
       images: [
         "/assets/projects/ph-mtn-center/image1.webp",
         "/assets/projects/ph-mtn-center/image2.webp",
