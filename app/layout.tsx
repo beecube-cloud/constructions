@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Esthoj Group',
-  description: 'Construction and Engineering Excellence',
+  title: 'Esthoj Construction and Engineering',
+  description: 'Engineering and Construction Excellence',
   icons: {
     icon: '/assets/logo.svg',
     shortcut: '/favicon-16x16.png',
