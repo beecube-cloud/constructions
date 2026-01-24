@@ -352,6 +352,8 @@ export const parallaxImages: ParallaxImage[] = [
         "/assets/projects/akure-hotel/image22.webp",
         "/assets/projects/akure-hotel/image23.webp",
         "/assets/projects/akure-hotel/image24.webp",
+        "/assets/projects/akure-hotel/image25.webp",
+        "/assets/projects/akure-hotel/image26.webp",
       ],
     },
 
