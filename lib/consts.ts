@@ -30,7 +30,7 @@ export const parallaxImages: ParallaxImage[] = [
       speed: 0.3,
     },
   ];
-  
+
   export const mainButtons: HeroButton[] = [
     {
       text: 'Explore Divisions',
@@ -100,7 +100,7 @@ export const parallaxImages: ParallaxImage[] = [
         "/assets/projects/citec/image22.webp",
       ],
     },
-   
+
     {
       slug: 'ph-mansion',
       title: "Port Harcourt Mansion",
@@ -153,7 +153,6 @@ export const parallaxImages: ParallaxImage[] = [
         "/assets/projects/hotr/image4.webp",
       ],
     },
-    // Add more projects for the full projects page
     {
       slug: 'enclave-estate-asokoro',
       title: "Enclave Estate Asokoro, Abuja",
@@ -397,8 +396,6 @@ export const parallaxImages: ParallaxImage[] = [
       ],
     },
 
-    // nedd to add the rest of the picture 
-
     {
       slug: 'mtn-durumi',
       title: "MTN Switch Durum",
@@ -505,6 +502,3 @@ export const parallaxImages: ParallaxImage[] = [
         'Yes. We perform routine site visits to assess work progress, verify completed activities, prepare interim valuations, and ensure quality and contract compliance.',
     },
   ];
-  
-  
-

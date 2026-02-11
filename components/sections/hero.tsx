@@ -18,7 +18,7 @@ export function HeroSection({
   buttons,
   backgroundColor = '#0A1236',
   backgroundImage,
-  backgroundImages, 
+  backgroundImages,
   backgroundVideo,
   parallaxImages,
   textAlign = 'center',
@@ -29,7 +29,7 @@ export function HeroSection({
   customContent,
   sliderInterval = 5000,
   showSliderControls = true,
-  showSliderDots = true, 
+  showSliderDots = true,
 }: HeroSectionProps) {
   const scrollY = useScrollParallax();
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -326,22 +326,3 @@ export function HeroSliderExample() {
     />
   );
 }
-
-// Original single image example
-// export function HeroSingleImageExample() {
-//   return (
-//     <HeroSection
-//       variant="single-image"
-//       brandLabel="Esthoj Construction & Facility Management"
-//       brandIcon="/assets/hero/dot.svg"
-//       heading="Shaping Infrastructure. Strengthening Communities."
-//       description="Engineering Construction & Facility Management has translated client visions into durable, sustainable infrastructure, from commercial and residential developments to roads, energy and facility services."
-//       buttons={divisionButtons}
-//       backgroundColor="#1A1F4E"
-//       backgroundImage="/assets/home/home-image1.webp"
-//       textAlign="center"
-//       overlay={true}
-//       overlayOpacity={60}
-//     />
-//   );
-// }

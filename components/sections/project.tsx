@@ -19,6 +19,7 @@ interface ProjectsSectionProps {
   projects?: Project[];
   maxItems?: number;
   className?: string;
+  animateOnScroll?: boolean;
 }
 
 const ProjectsSection: React.FC<ProjectsSectionProps> = ({
@@ -29,8 +30,9 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({
   projects,
   maxItems,
   className = "",
+  animateOnScroll = true,
 }) => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(!animateOnScroll);
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
   const [isMobile, setIsMobile] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -56,6 +58,16 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({
     const handleResize = () => checkMobile();
     if (typeof window !== 'undefined') {
       window.addEventListener('resize', handleResize);
+    }
+
+    if (!animateOnScroll) {
+      setIsVisible(true);
+      setVisibleItems(finalProjects.map((_, i) => i));
+      return () => {
+        if (typeof window !== 'undefined') {
+          window.removeEventListener('resize', handleResize);
+        }
+      };
     }
 
     const observer = new IntersectionObserver(
@@ -94,20 +106,20 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 sm:gap-4 mb-8 sm:mb-12 lg:mb-16">
           <h2
-            className={`text-3xl sm:text-4xl lg:text-5xl text-primary transition-all duration-1000 ${
-              isVisible
-                ? "opacity-100 transform translate-y-0"
-                : "opacity-0 transform translate-y-8"
+            className={`text-3xl sm:text-4xl lg:text-5xl text-primary ${
+              animateOnScroll
+                ? `transition-all duration-1000 ${isVisible ? "opacity-100 transform translate-y-0" : "opacity-0 transform translate-y-8"}`
+                : ""
             }`}
           >
             {title}
           </h2>
           {showButton && (
             <div
-              className={`transition-all duration-1000 delay-300 ${
-                isVisible
-                  ? "opacity-100 transform translate-y-0"
-                  : "opacity-0 transform translate-y-8"
+              className={`${
+                animateOnScroll
+                  ? `transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 transform translate-y-0" : "opacity-0 transform translate-y-8"}`
+                  : ""
               }`}
             >
               <Link
@@ -129,21 +141,23 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({
     <Link
       href={`/projects/${project.slug}`}
       key={project.slug}
-      className={`group block transition-all duration-700 hover:-translate-y-1 sm:hover:-translate-y-2 ${
-        isItemVisible
-          ? "opacity-100 transform translate-y-0"
-          : "opacity-0 transform translate-y-8"
+      className={`group block hover:-translate-y-1 sm:hover:-translate-y-2 ${
+        animateOnScroll
+          ? `transition-all duration-700 ${isItemVisible ? "opacity-100 transform translate-y-0" : "opacity-0 transform translate-y-8"}`
+          : "transition-all duration-300"
       }`}
-      style={{
-        transitionDelay: `${index * (isMobile ? 100 : 150)}ms`,
-      }}
+      style={
+        animateOnScroll
+          ? { transitionDelay: `${index * (isMobile ? 100 : 150)}ms` }
+          : undefined
+      }
     >
       <div className="rounded-2xl sm:rounded-3xl overflow-hidden mb-3 sm:mb-4 aspect-4/3 shadow-lg group-hover:shadow-xl transition-all duration-500">
         <img
           src={project.images?.[0]}
           alt={project.title}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-          loading="lazy"
+          loading={animateOnScroll ? "lazy" : "eager"}
         />
       </div>
 
