@@ -19,6 +19,7 @@ interface ProjectsSectionProps {
   projects?: Project[];
   maxItems?: number;
   className?: string;
+  animateOnScroll?: boolean;
 }
 
 const ProjectsSection: React.FC<ProjectsSectionProps> = ({
@@ -29,8 +30,9 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({
   projects,
   maxItems,
   className = "",
+  animateOnScroll = true,
 }) => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(!animateOnScroll);
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
   const [isMobile, setIsMobile] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -56,6 +58,16 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({
     const handleResize = () => checkMobile();
     if (typeof window !== 'undefined') {
       window.addEventListener('resize', handleResize);
+    }
+
+    if (!animateOnScroll) {
+      setIsVisible(true);
+      setVisibleItems(finalProjects.map((_, i) => i));
+      return () => {
+        if (typeof window !== 'undefined') {
+          window.removeEventListener('resize', handleResize);
+        }
+      };
     }
 
     const observer = new IntersectionObserver(
