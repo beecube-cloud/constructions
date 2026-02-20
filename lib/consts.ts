@@ -1,5 +1,59 @@
 import { FAQItem, HeroButton, ParallaxImage, TeamMember } from "./types";
 
+export interface MtnAbujaRoom {
+  id: string;
+  label: string;
+  slug: string;
+  images: string[];
+}
+
+export const mtnAbujaRooms: MtnAbujaRoom[] = [
+  {
+    id: "mtn_abuja-typical_toilet",
+    label: "Office Design",
+    slug: "mtn_abuja-typical_toilet",
+    images: [
+      "/assets/projects/mtn_abuja-typical_toilet/image1.webp",
+      "/assets/projects/mtn_abuja-typical_toilet/image2.webp",
+      "/assets/projects/mtn_abuja-typical_toilet/image3.webp",
+      "/assets/projects/mtn_abuja-typical_toilet/image4.webp",
+      "/assets/projects/mtn_abuja-typical_toilet/image5.webp",
+      "/assets/projects/mtn_abuja-typical_toilet/image6.webp",
+      "/assets/projects/mtn_abuja-typical_toilet/image7.webp",
+      "/assets/projects/mtn_abuja-typical_toilet/image8.webp",
+      "/assets/projects/mtn_abuja-typical_toilet/image9.webp",
+      "/assets/projects/mtn_abuja-typical_toilet/image10.webp",
+      "/assets/projects/mtn_abuja-typical_toilet/image11.webp",
+      "/assets/projects/mtn_abuja-typical_toilet/image12.webp",
+      "/assets/projects/mtn_abuja-typical_toilet/image13.webp",
+      "/assets/projects/mtn_abuja-typical_toilet/image14.webp",
+      "/assets/projects/mtn_abuja-typical_toilet/image15.webp",
+    ],
+  },
+  {
+    id: "conference-room",
+    label: "Conference Room",
+    slug: "conference-room",
+    images: [
+      "/assets/projects/conference-room/image1.webp",
+      "/assets/projects/conference-room/image2.webp",
+      "/assets/projects/conference-room/image3.webp",
+      "/assets/projects/conference-room/image4.webp",
+    ],
+  },
+  {
+    id: "ceo-office",
+    label: "CEO Office",
+    slug: "ceo-office",
+    images: [
+      "/assets/projects/ceo-office/image1.webp",
+      "/assets/projects/ceo-office/image2.webp",
+      "/assets/projects/ceo-office/image3.webp",
+      "/assets/projects/ceo-office/image4.webp",
+    ],
+  },
+];
+
 export const parallaxImages: ParallaxImage[] = [
     {
       src: '/assets/hero/image1.svg',
@@ -444,28 +498,13 @@ export const parallaxImages: ParallaxImage[] = [
     },
 
     {
-      slug: 'mtn_abuja-typical_toilet',
-      title: "MTN Abuja Regional Office design proposal",
+      slug: 'mtn-abuja-regional-office',
+      title: "MTN Abuja Regional Office",
       date: "25th February, 2025",
-      description: 'MTN Abuja Regional Office design proposal',
+      description: 'MTN Abuja Regional Office design proposal — featuring office design, conference room, and CEO office',
       images: [
         "/assets/projects/mtn_abuja-typical_toilet/image1.webp",
-        "/assets/projects/mtn_abuja-typical_toilet/image2.webp",
-        "/assets/projects/mtn_abuja-typical_toilet/image3.webp",
-        "/assets/projects/mtn_abuja-typical_toilet/image4.webp",
-        "/assets/projects/mtn_abuja-typical_toilet/image5.webp",
-        "/assets/projects/mtn_abuja-typical_toilet/image6.webp",
-        "/assets/projects/mtn_abuja-typical_toilet/image7.webp",
-        "/assets/projects/mtn_abuja-typical_toilet/image8.webp",
-        "/assets/projects/mtn_abuja-typical_toilet/image9.webp",
-        "/assets/projects/mtn_abuja-typical_toilet/image10.webp",
-        "/assets/projects/mtn_abuja-typical_toilet/image11.webp",
-        "/assets/projects/mtn_abuja-typical_toilet/image12.webp",
-        "/assets/projects/mtn_abuja-typical_toilet/image13.webp",
-        "/assets/projects/mtn_abuja-typical_toilet/image14.webp",
-        "/assets/projects/mtn_abuja-typical_toilet/image15.webp",
       ],
-
     },
 
     {
@@ -528,19 +567,6 @@ export const parallaxImages: ParallaxImage[] = [
     },
 
     {
-      slug: 'ceo-office',
-      title: "CEO Office",
-      date: "19th February, 2026",
-      description: 'CEO office interior design',
-      images: [
-        "/assets/projects/ceo-office/image1.webp",
-        "/assets/projects/ceo-office/image2.webp",
-        "/assets/projects/ceo-office/image3.webp",
-        "/assets/projects/ceo-office/image4.webp",
-      ],
-    },
-
-    {
       slug: 'master-madam-bathroom',
       title: "Master Madam Bathroom",
       date: "19th February, 2026",
@@ -575,19 +601,6 @@ export const parallaxImages: ParallaxImage[] = [
         "/assets/projects/dinner-3d/image9.webp",
         "/assets/projects/dinner-3d/image10.webp",
         "/assets/projects/dinner-3d/image11.webp",
-      ],
-    },
-
-    {
-      slug: 'conference-room',
-      title: "Conference Room",
-      date: "19th February, 2026",
-      description: 'Conference room interior design',
-      images: [
-        "/assets/projects/conference-room/image1.webp",
-        "/assets/projects/conference-room/image2.webp",
-        "/assets/projects/conference-room/image3.webp",
-        "/assets/projects/conference-room/image4.webp",
       ],
     },
 
