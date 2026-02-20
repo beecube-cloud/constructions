@@ -697,4 +697,5 @@ export const parallaxImages: ParallaxImage[] = [
       answer:
         'Yes. We perform routine site visits to assess work progress, verify completed activities, prepare interim valuations, and ensure quality and contract compliance.',
     },
+    
   ];
